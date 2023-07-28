@@ -20,7 +20,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #ffffff;
+  background: #e5e5e5;
 }
 
 /*
@@ -68,5 +68,5 @@
 }
 
 .bm-item:hover {
-  color: #ffffff;
+  color: #e5e5e5;
 }

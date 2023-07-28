@@ -1,12 +1,14 @@
 interface SectionInput {
+  id: string;
   title: string;
   text: string;
   dark: boolean;
 }
 
-export default function Section({ title, text, dark }: SectionInput) {
+export default function Section({ id, title, text, dark }: SectionInput) {
   return (
     <div
+      id={id}
       className={`pt-10 pb-10 flex flex-col items-center
       ${dark ? 'bg-black' : 'bg-white'}`}
     >

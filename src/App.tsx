@@ -13,7 +13,7 @@ export default function App() {
       <div className="visible fixed top-0 left-0 right-0 h-16 fixed bg-black sm:invisible">
         <Sidebar />
       </div>
-      <div className="bg-black pt-5 sm:mt-16">
+      <div className="bg-black pt-5 sm:mt-16 sm:pt-0">
         <Landing />
       </div>
     </div>
