@@ -12,6 +12,7 @@
     @apply text-6xl;
     @apply mb-4;
     @apply text-center;
-    @apply font-light;
+    @apply font-extralight !important;
+    @apply text-yellow !important;
   }
 }
