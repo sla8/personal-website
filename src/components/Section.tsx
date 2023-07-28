@@ -10,7 +10,7 @@ export default function Section({ title, text, dark }: SectionInput) {
       className={`pt-10 pb-10 flex flex-col items-center
       ${dark ? 'bg-black' : 'bg-white'}`}
     >
-      <div className="lg:max-w-4xl sm:pl-10 pr-10">
+      <div className="pl-10 pr-10 sm:pl-10 pr-10 lg:max-w-4xl">
         <h1 className={`${dark ? 'text-textwhite' : 'text-textblack'}`}>
           {title}
         </h1>

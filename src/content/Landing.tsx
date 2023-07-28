@@ -1,6 +1,6 @@
 import Section from 'components/Section';
 import { text } from 'placeholder/Text';
-import { navitems } from 'components/Navbar';
+import { navitems } from 'placeholder/Navigation';
 
 export default function Landing() {
   return (

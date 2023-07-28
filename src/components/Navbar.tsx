@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-
+import { navitems } from 'placeholder/Navigation';
 import logo from 'images/working3.svg';
-
-export var navitems = ['Honey', 'Cupcake', 'Peach', 'Sugar Pie'];
 
 export default class Navbar extends Component {
   scrollToTop() {
