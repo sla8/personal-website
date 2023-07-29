@@ -1,0 +1,35 @@
+.container-align {
+  @apply flex;
+  @apply flex-col;
+  @apply items-center;
+}
+
+.content-container {
+  @apply pb-20;
+  @apply pt-20;
+  @apply pl-10;
+  @apply pr-10;
+  @apply md:max-w-4xl;
+}
+
+.h1-light {
+  @apply text-5xl;
+  @apply md:text-7xl;
+  @apply mb-6;
+  @apply text-center;
+  @apply font-extralight !important;
+  @apply text-yellow !important;
+}
+
+.h1-dark {
+  @apply text-5xl;
+  @apply md:text-7xl;
+  @apply mb-6;
+  @apply text-center;
+  @apply font-extralight !important;
+  @apply text-blue !important;
+}
+
+.content-text {
+  @apply text-justify;
+}

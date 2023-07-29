@@ -14,13 +14,16 @@
 
 /* Position and sizing of clickable cross button */
 .bm-cross-button {
+  position: fixed;
   height: 24px;
   width: 24px;
+  top: 1.5rem !important;
+  right: 2.5rem !important;
 }
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #e5e5e5;
+  background: #fca311;
 }
 
 /*
@@ -34,8 +37,12 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background: #14213d;
-  padding: 2.5em 1.5em 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75),
+    rgba(0, 0, 0, 1)
+  );
+  padding: 2.5em 1em 0;
   font-size: 1.5rem;
   font-weight: 300;
 }
@@ -43,12 +50,12 @@
 /* Wrapper for item list */
 .bm-item-list {
   color: #14213d;
-  padding: 0.8em;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
+  padding: 0.2em 1.3em 0.2em 1.3em;
 }
 
 /* Styling of overlay */
@@ -59,14 +66,21 @@
 /* Individual item */
 .bm-item {
   display: inline-block;
-
   color: #e5e5e5;
   margin-bottom: 10px;
   text-align: left;
-  text-decoration: none;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.75rem;
+  font-weight: 200;
+  text-transform: uppercase;
   transition: color 0.2s;
 }
 
 .bm-item:hover {
-  color: #e5e5e5;
+  background-image: linear-gradient(
+    to right,
+    rgba(20, 33, 62, 0.9),
+    rgba(20, 33, 62, 0)
+  );
+  color: #ffffff;
 }

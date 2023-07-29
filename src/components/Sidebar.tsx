@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-scroll';
 import { slide as Menu } from 'react-burger-menu';
-import { navitems } from 'placeholder/Navigation';
+import { navitems } from 'res/placeholder/Navigation';
 import 'components/Sidebar.css';
 
 export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
@@ -38,7 +38,6 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
             offset={-64}
             duration={500}
             onClick={() => this.closeMenu()}
-            className="font-extralight uppercase text-textwhite"
           >
             {navitem}
           </Link>
