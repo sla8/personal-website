@@ -9,44 +9,19 @@ interface ITSInput {
   imageAlt?: string;
 }
 
-class TSInput implements ITSInput {
-  id: string;
-  title: string;
-  text: string;
-  dark: boolean;
-  image?: string;
-  imageAlt?: string;
-
-  constructor(
-    id: string,
-    title: string,
-    text: string,
-    dark: boolean,
-    image?: string,
-    imageAlt?: string
-  ) {
-    this.id = id;
-    this.title = title;
-    this.text = text;
-    this.dark = dark;
-    this.image = image;
-    this.imageAlt = imageAlt;
-  }
-}
-
 export function TextSection(props: ITSInput) {
   return (
     <div
       id={props.id}
-      className={`container-align
+      className={`section-container-align
       ${props.dark ? 'bg-black' : 'bg-white'}`}
     >
-      <div className="content-container">
+      <div className="section-content-container">
         <h1 className={`${props.dark ? 'h1-light' : 'h1-dark'}`}>
           {props.title}
         </h1>
         <p
-          className={`content-text
+          className={`section-content-text
           ${props.dark ? 'text-textwhite' : 'text-textblack'}`}
         >
           {props.text}
@@ -58,8 +33,8 @@ export function TextSection(props: ITSInput) {
 
 export function TextSectionImageLeft(props: ITSInput) {
   return (
-    <div id={props.id} className="container-align">
-      <div className="content-container flex flex-col sm:flex-row sm:items-center">
+    <div id={props.id} className="section-container-align">
+      <div className="section-content-container flex flex-col sm:flex-row sm:items-center">
         <div className="w-full sm:w-7/12 md:w-10/12">
           <img src={props.image} alt={props.imageAlt} />
         </div>
@@ -68,7 +43,7 @@ export function TextSectionImageLeft(props: ITSInput) {
             {props.title}
           </h1>
           <p
-            className={`content-text
+            className={`section-content-text
           ${props.dark ? 'text-textwhite' : 'text-textblack'}`}
           >
             {props.text}

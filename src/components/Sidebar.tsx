@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import { Link } from 'react-scroll';
 import { slide as Menu } from 'react-burger-menu';
-import { navitems } from 'res/placeholder/Navigation';
 import 'components/Sidebar.css';
+import {
+  navTitle as helloNavTitle,
+  title as helloTitle,
+} from 'res/landing/hello';
 
 export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   constructor(props: any) {
@@ -22,26 +25,25 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   }
 
   render() {
+    console.log(this);
     return (
       <Menu
         right
         isOpen={this.state.menuOpen}
         onStateChange={(state) => this.handleStateChange(state)}
       >
-        {navitems.map((navitem) => (
-          <Link
-            key={navitem}
-            activeClass="active"
-            to={`section${navitem}`}
-            spy={true}
-            smooth={true}
-            offset={-64}
-            duration={500}
-            onClick={() => this.closeMenu()}
-          >
-            {navitem}
-          </Link>
-        ))}
+        <Link
+          key={helloNavTitle}
+          activeClass="active"
+          to={helloTitle}
+          spy={true}
+          smooth={true}
+          offset={-64}
+          duration={500}
+          onClick={() => this.closeMenu()}
+        >
+          {helloNavTitle}
+        </Link>
       </Menu>
     );
   }

@@ -1,15 +1,19 @@
-.container-align {
+.section-container-align {
   @apply flex;
   @apply flex-col;
   @apply items-center;
 }
 
-.content-container {
+.section-content-container {
   @apply pb-20;
   @apply pt-20;
   @apply pl-10;
   @apply pr-10;
   @apply md:max-w-4xl;
+}
+
+.section-content-text {
+  @apply text-justify;
 }
 
 .h1-light {
@@ -28,8 +32,4 @@
   @apply text-center;
   @apply font-extralight !important;
   @apply text-blue !important;
-}
-
-.content-text {
-  @apply text-justify;
 }

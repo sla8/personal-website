@@ -1,10 +1,11 @@
-import React, { Component } from 'react';
-import { navitems } from 'res/placeholder/Navigation';
+import { Component } from 'react';
 import { Link } from 'react-scroll';
-import 'components/Navbar.css';
-import { title as helloTitle, text as helloText } from 'res/landing/hello';
+import {
+  title as helloTitle,
+  navTitle as helloNavTitle,
+} from 'res/landing/hello';
 
-interface NavbarItem {
+interface NavbarLinkInput {
   key: string;
   to: string;
   text: string;
@@ -15,25 +16,25 @@ export default class Navbar extends Component {
     return (
       <nav className="fixed top-0 left-0 right-0">
         <div className="flex flex-row items-center justify-center bg-black h-16 pl-3 pr-3">
-          <this.NewItem key={helloTitle} to={helloTitle} text={helloTitle} />
-          {navitems.map((navitem) => (
-            <this.NewItem
-              key={navitem}
-              to={`section${navitem}`}
-              text={navitem}
-            />
-          ))}
+          <this.NavbarLink
+            key={helloTitle}
+            to={helloTitle}
+            text={helloNavTitle}
+          />
         </div>
       </nav>
     );
   }
 
-  private NewItem(props: NavbarItem) {
+  private NavbarLink(props: NavbarLinkInput) {
     return (
       <Link
         key={props.key}
-        className="navitem"
-        activeClass="active"
+        className="
+        flex h-full items-center pl-6 pr-6
+        text-lg font-extralight uppercase text-textwhite
+        hover:text-white hover:bg-gradient-to-b from-darkblue/50 to-black"
+        activeClass="bg-gradient-to-b from-darkblue to-black text-white"
         to={props.to}
         spy={true}
         smooth={true}
