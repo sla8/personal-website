@@ -2,10 +2,8 @@ import { Component } from 'react';
 import { Link } from 'react-scroll';
 import { slide as Menu } from 'react-burger-menu';
 import 'components/Sidebar.css';
-import {
-  navTitle as helloNavTitle,
-  title as helloTitle,
-} from 'res/landing/hello';
+import logo from 'images/logo-silviala.svg';
+import { title as helloTitle } from 'res/landing/hello';
 
 export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   constructor(props: any) {
@@ -25,7 +23,6 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   }
 
   render() {
-    console.log(this);
     return (
       <Menu
         right
@@ -33,7 +30,7 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
         onStateChange={(state) => this.handleStateChange(state)}
       >
         <Link
-          key={helloNavTitle}
+          key="sidebar-logo"
           activeClass="active"
           to={helloTitle}
           spy={true}
@@ -42,7 +39,19 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
           duration={500}
           onClick={() => this.closeMenu()}
         >
-          {helloNavTitle}
+          <img className="z-10 w-24" src={logo} alt="logo full name" />
+        </Link>
+        <Link
+          key="sidebar-logo"
+          activeClass="active"
+          to="test-section"
+          spy={true}
+          smooth={true}
+          offset={-64}
+          duration={500}
+          onClick={() => this.closeMenu()}
+        >
+          Lorem ipsum
         </Link>
       </Menu>
     );

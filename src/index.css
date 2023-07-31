@@ -2,15 +2,71 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+
 @layer base {
   body {
     @apply font-sans;
     @apply antialiased;
+    @apply text-base;
     @apply font-light;
     @apply bg-black;
   }
 
   p {
     @apply whitespace-pre-line;
+  }
+
+  .logo {
+    font-family: 'Rozha One';
+    @apply mb-2;
+    @apply pl-1;
+    @apply pr-1;
+    @apply text-2xl;
+    @apply whitespace-nowrap;
+    @apply text-yellow;
+    @apply lowercase;
+    @apply border-t-8;
+    @apply border-darkblue;
+  }
+
+  .h1-light {
+    font-family: 'Rozha One';
+    @apply text-5xl;
+    @apply md:text-6xl;
+    @apply mb-4;
+    @apply text-center;
+    @apply antialiased;
+    @apply text-yellow;
+  }
+
+  .h1-dark {
+    font-family: 'Rozha One';
+    @apply text-4xl;
+    @apply md:text-6xl;
+    @apply mb-4;
+    @apply text-center;
+    @apply antialiased;
+    @apply text-textblue;
+  }
+
+  .h2-light {
+    @apply mb-4;
+    @apply text-lg;
+    @apply text-justify;
+    @apply antialiased;
+    @apply whitespace-pre-line;
+    @apply font-extralight;
+    @apply text-yellow;
+  }
+
+  .h2-dark {
+    @apply mb-4;
+    @apply text-lg;
+    @apply text-justify;
+    @apply antialiased;
+    @apply whitespace-pre-line;
+    @apply font-light;
+    @apply text-textblue;
   }
 }

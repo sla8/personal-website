@@ -1,9 +1,7 @@
 import { Component } from 'react';
 import { Link } from 'react-scroll';
-import {
-  title as helloTitle,
-  navTitle as helloNavTitle,
-} from 'res/landing/hello';
+import logo from 'images/logo-silviala.svg';
+import { title as helloTitle } from 'res/landing/hello';
 
 interface NavbarLinkInput {
   key: string;
@@ -14,15 +12,35 @@ interface NavbarLinkInput {
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="fixed top-0 left-0 right-0">
-        <div className="flex flex-row items-center justify-center bg-black h-16 pl-3 pr-3">
-          <this.NavbarLink
-            key={helloTitle}
-            to={helloTitle}
-            text={helloNavTitle}
-          />
+      <nav className="fixed top-0 left-0 right-0 bg-black">
+        <div className="w-full max-w-4xl flex flex-row items-center m-auto pr-10 pl-10">
+          <this.NavbarLogo />
+          <div className="flex flex-row items-center justify-center w-full h-full">
+            <this.NavbarLink
+              key={'test'}
+              to={'test-section'}
+              text={'Lorem ipsum'}
+            />
+          </div>
         </div>
       </nav>
+    );
+  }
+
+  private NavbarLogo() {
+    return (
+      <Link
+        key="navbar-logo"
+        className="cursor-pointer"
+        activeClass=""
+        to={helloTitle}
+        spy={true}
+        smooth={true}
+        offset={-64}
+        duration={500}
+      >
+        <img className="h-8" src={logo} alt="logo full name" />
+      </Link>
     );
   }
 
@@ -31,10 +49,9 @@ export default class Navbar extends Component {
       <Link
         key={props.key}
         className="
-        flex h-full items-center pl-6 pr-6
-        text-lg font-extralight uppercase text-textwhite
-        hover:text-white hover:bg-gradient-to-b from-darkblue/50 to-black"
-        activeClass="bg-gradient-to-b from-darkblue to-black text-white"
+        flex h-full items-center pl-6 pr-6 pt-3 pb-3
+        text-base font-light uppercase text-textwhite hover:border-t-8 hover:pt-1 hover:border-darkblue cursor-pointer"
+        activeClass=""
         to={props.to}
         spy={true}
         smooth={true}

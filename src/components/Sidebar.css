@@ -23,7 +23,7 @@
 
 /* Color/shape of close button cross */
 .bm-cross {
-  background: #fca311;
+  background: #ffffff;
 }
 
 /*
@@ -47,15 +47,10 @@
   font-weight: 300;
 }
 
-/* Wrapper for item list */
-.bm-item-list {
-  color: #14213d;
-}
-
 /* Individual item */
 .bm-item {
   display: inline-block;
-  padding: 0.2em 1.3em 0.2em 1.3em;
+  padding: 3px 21px 2px 21px;
 }
 
 /* Styling of overlay */
@@ -69,7 +64,7 @@
   color: #e5e5e5;
   margin-bottom: 10px;
   text-align: left;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1rem; /* 18px */
   line-height: 1.75rem;
   font-weight: 200;
   text-transform: uppercase;
@@ -77,10 +72,8 @@
 }
 
 .bm-item:hover {
-  background-image: linear-gradient(
-    to right,
-    rgba(20, 33, 62, 0.9),
-    rgba(20, 33, 62, 0)
-  );
+  border-left: solid 8px #1d315c;
   color: #ffffff;
+  padding-left: 13px;
+  cursor: pointer;
 }
