@@ -1,39 +1,22 @@
-import { TextSection, TextSectionImageLeft } from 'components/Section';
-import {
-  title as helloTitle,
-  subtitle as helloSubtitle,
-  text as helloText,
-} from 'res/landing/hello';
-import womanReading from 'images/woman_reading.svg';
-import { text as loremIpsum } from 'res/placeholder/Text';
+import Hello from './landing/Hello';
+import LoremIpsum from './landing/LoremIpsum';
 
-export default function Landing() {
-  let helloImage = <HelloImage />;
-  return (
-    <div>
-      <TextSectionImageLeft
-        id={helloTitle}
-        title={helloTitle}
-        subtitle={helloSubtitle}
-        text={helloText}
-        image={helloImage}
-        imageAlt="woman reading"
-        dark={true}
-      />
-      <TextSection
-        id="test-section"
-        title="Lorem ipsum"
-        text={loremIpsum}
-        dark={false}
-      />
-    </div>
-  );
+export interface LandingSectionInput {
+  darkBackground: boolean;
 }
 
-function HelloImage() {
+export default function Landing() {
+  var darkBackground = false;
+
+  function computeBackground() {
+    darkBackground = darkBackground ? false : true;
+    return darkBackground;
+  }
+
   return (
-    <div className="w-full sm:w-7/12 md:w-10/12">
-      <img src={womanReading} alt="woman reading" />
+    <div>
+      <Hello darkBackground={computeBackground()} />
+      <LoremIpsum darkBackground={computeBackground()} />
     </div>
   );
 }
