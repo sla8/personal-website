@@ -6,9 +6,9 @@ export default function LoremIpsum(props: LandingSectionInput) {
   return (
     <Section
       id="test-section"
-      dark={props.darkBackground}
+      darkBg={props.darkBg}
       content={createTextSectionContent(
-        props.darkBackground,
+        props.darkBg,
         'Lorem Ipsum',
         undefined,
         loremIpsum

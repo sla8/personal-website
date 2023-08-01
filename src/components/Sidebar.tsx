@@ -3,7 +3,7 @@ import { Link } from 'react-scroll';
 import { slide as Menu } from 'react-burger-menu';
 import 'components/Sidebar.css';
 import logo from 'images/logo-silviala.svg';
-import { title as helloTitle } from 'res/landing/hello';
+import { id as helloId } from 'res/landing/hello';
 
 export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   constructor(props: any) {
@@ -32,7 +32,7 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
         <Link
           key="sidebar-logo"
           activeClass="active"
-          to={helloTitle}
+          to={helloId}
           spy={true}
           smooth={true}
           offset={-64}

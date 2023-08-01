@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { Link } from 'react-scroll';
 import logo from 'images/logo-silviala.svg';
-import { title as helloTitle } from 'res/landing/hello';
+import { id as helloId } from 'res/landing/hello';
 
 interface NavbarLinkInput {
   key: string;
@@ -33,7 +33,7 @@ export default class Navbar extends Component {
         key="navbar-logo"
         className="cursor-pointer"
         activeClass=""
-        to={helloTitle}
+        to={helloId}
         spy={true}
         smooth={true}
         offset={-64}

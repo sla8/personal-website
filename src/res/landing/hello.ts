@@ -1,3 +1,4 @@
+export const id: string = 'landing-hello';
 export const title: string = 'Hello';
 
 export const subtitle: string = `I'm Silvia. Glad you found your way here!`;

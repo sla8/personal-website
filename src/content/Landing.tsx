@@ -1,22 +1,24 @@
 import Hello from './landing/Hello';
 import LoremIpsum from './landing/LoremIpsum';
+import Timeline from './landing/Timeline';
 
 export interface LandingSectionInput {
-  darkBackground: boolean;
+  darkBg: boolean;
 }
 
 export default function Landing() {
-  var darkBackground = false;
+  var darkBg = false;
 
   function computeBackground() {
-    darkBackground = darkBackground ? false : true;
-    return darkBackground;
+    darkBg = darkBg ? false : true;
+    return darkBg;
   }
 
   return (
     <div>
-      <Hello darkBackground={computeBackground()} />
-      <LoremIpsum darkBackground={computeBackground()} />
+      <Hello darkBg={computeBackground()} />
+      <Timeline darkBg={computeBackground()} />
+      <LoremIpsum darkBg={computeBackground()} />
     </div>
   );
 }

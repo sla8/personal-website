@@ -32,8 +32,8 @@
 
   .h1-light {
     font-family: 'Rozha One';
-    @apply text-5xl;
-    @apply md:text-6xl;
+    @apply text-4xl;
+    @apply md:text-5xl;
     @apply mb-4;
     @apply text-center;
     @apply antialiased;
@@ -43,7 +43,7 @@
   .h1-dark {
     font-family: 'Rozha One';
     @apply text-4xl;
-    @apply md:text-6xl;
+    @apply md:text-5xl;
     @apply mb-4;
     @apply text-center;
     @apply antialiased;

@@ -1,26 +1,28 @@
 interface SectionInput {
   id: string;
-  dark: boolean;
+  darkBg: boolean;
   content: JSX.Element;
 }
 
 export function Section(props: SectionInput) {
   let contentContainer = createContentContainer(props.content);
-  return createSectionContainer(props.id, props.dark, contentContainer);
+  return createSectionContainer(props.id, props.darkBg, contentContainer);
 }
 
 export function createTextSectionContent(
-  dark: boolean,
+  darkBg: boolean,
   title?: string,
   subtitle?: string,
   text?: string
 ) {
   return (
     <div>
-      <h1 className={`${dark ? 'h1-light' : 'h1-dark'}`}>{title}</h1>
-      <h2 className={`${dark ? 'h2-light' : 'h2-dark'}`}>{subtitle}</h2>
+      <h1 className={`${darkBg ? 'h1-light' : 'h1-dark'}`}>{title}</h1>
+      <h2 className={`${darkBg ? 'h2-light' : 'h2-dark'}`}>{subtitle}</h2>
       <p
-        className={`ext-justify ${dark ? 'text-textwhite' : 'text-textblack'}`}
+        className={`ext-justify ${
+          darkBg ? 'text-textwhite' : 'text-textblack'
+        }`}
       >
         {text}
       </p>
@@ -48,13 +50,15 @@ function createContentContainer(content: JSX.Element) {
 
 function createSectionContainer(
   id: string,
-  dark: boolean,
+  darkBg: boolean,
   content: JSX.Element
 ) {
   return (
     <div
       id={id}
-      className={`flex flex-col items-center ${dark ? 'bg-black' : 'bg-white'}`}
+      className={`flex flex-col items-center ${
+        darkBg ? 'bg-black' : 'bg-white'
+      }`}
     >
       {content}
     </div>
