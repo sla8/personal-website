@@ -2,7 +2,7 @@ import Navbar from 'components/Navbar';
 import Sidebar from 'components/Sidebar';
 import Landing from 'content/Landing';
 import { Link } from 'react-scroll';
-import { title as helloTitle } from 'res/landing/hello';
+import { id as helloId } from 'res/landing/hello';
 import logo from 'images/logo-silviala.svg';
 import { ThemeProvider } from '@emotion/react';
 import { createTheme } from '@mui/material';
@@ -45,7 +45,7 @@ export default function App() {
             key="navbar-logo"
             className="cursor-pointer"
             activeClass=""
-            to={helloTitle}
+            to={helloId}
             spy={true}
             smooth={true}
             offset={-64}

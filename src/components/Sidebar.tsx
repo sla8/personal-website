@@ -35,18 +35,6 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
         onStateChange={(state) => this.handleStateChange(state)}
       >
         <Link
-          key="sidebar-logo"
-          activeClass="active"
-          to={helloId}
-          spy={true}
-          smooth={true}
-          offset={-64}
-          duration={500}
-          onClick={() => this.closeMenu()}
-        >
-          <img className="w-24" src={logo} alt="logo full name" />
-        </Link>
-        <Link
           key={`sidebar-${educationId}`}
           activeClass="active"
           to={educationId}
