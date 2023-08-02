@@ -4,42 +4,37 @@ import {
   createTextSectionContent,
 } from 'components/Section';
 import { id, title, subtitle, text } from 'res/landing/hello';
-import womanReading from 'images/woman_web.svg';
-import { LandingSectionInput } from 'content/Landing';
+import womanReading from 'images/woman-web.svg';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
-export default function Hello(props: LandingSectionInput) {
-  return (
-    <Section
-      id={id}
-      darkBg={props.darkBg}
-      content={createHelloContent(props.darkBg)}
-    />
-  );
+export default function Hello() {
+  return <Section id={id} content={createHelloContent()} />;
 }
 
-function createHelloContent(darkBg: boolean) {
+function createHelloContent() {
   let textContent = (
-    <div className="w-full pt-12 sm:pt-0 sm:ml-10 md:pt-0 md:ml-20">
-      {createTextSectionContent(darkBg, title, subtitle, text)}
-      <br />
-      {createSocialSubsection(darkBg)}
+    <div className="w-full">
+      {createTextSectionContent(title, subtitle, text)}
     </div>
   );
   let imageContent = (
-    <div className="w-full sm:w-7/12 md:w-10/12">
+    <div className="w-full w-8/12 md:w-7/12 lg:w-10/12 m-auto">
       <img src={womanReading} alt="woman reading" />
     </div>
   );
-  return createSplitSectionContent(imageContent, textContent);
+  return (
+    <div className="text-center">
+      {createSplitSectionContent(imageContent, textContent)}
+      {createSocialSubsection()}
+    </div>
+  );
 }
 
-function createSocialSubsection(darkBg: boolean) {
+function createSocialSubsection() {
   return (
-    <div
-      className={`text-center ${darkBg ? 'text-textwhite' : 'text-textblack'}`}
-    >
+    <div className="text-center bg-green rounded-3xl text-white w-fit pl-10 pr-10 pt-2 pb-2 mt-4 m-auto">
+      Find me on &nbsp;
       <a href="https://www.linkedin.com/in/sla8">
         <LinkedInIcon sx={{ fontSize: { xs: 30, sm: 30 } }} />
       </a>
