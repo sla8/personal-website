@@ -21,7 +21,6 @@ export default class Navbar extends Component {
               educationTitle
             )}
             {this.createNavbarLink(`navbar-${workId}`, workId, workTitle)}
-            {this.createNavbarLink('test', 'test-section', 'Lorem ipsum')}
           </div>
         </div>
       </nav>

@@ -1,5 +1,4 @@
 import Hello from './landing/Hello';
-import LoremIpsum from './landing/LoremIpsum';
 import Education from './landing/Education';
 import Work from './landing/Work';
 
@@ -20,7 +19,6 @@ export default function Landing() {
       <Hello darkBg={computeBackground()} />
       <Education darkBg={computeBackground()} />
       <Work darkBg={computeBackground()} />
-      <LoremIpsum darkBg={computeBackground()} />
     </div>
   );
 }

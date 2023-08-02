@@ -70,18 +70,6 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
         >
           {workTitle}
         </Link>
-        <Link
-          key="sidebar-logo"
-          activeClass="active"
-          to="test-section"
-          spy={true}
-          smooth={true}
-          offset={-64}
-          duration={500}
-          onClick={() => this.closeMenu()}
-        >
-          Lorem ipsum
-        </Link>
       </Menu>
     );
   }
