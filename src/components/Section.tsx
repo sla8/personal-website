@@ -1,27 +1,37 @@
 interface SectionInput {
   id: string;
-  darkBg: boolean;
   content: JSX.Element;
 }
 
 export function Section(props: SectionInput) {
   let contentContainer = createContentContainer(props.content);
-  return createSectionContainer(props.id, props.darkBg, contentContainer);
+  return createSectionContainer(props.id, contentContainer);
 }
 
 export function createTextSectionContent(
-  darkBg: boolean,
   title?: string,
   subtitle?: string,
   text?: string
 ) {
   return (
-    <div>
-      <h1 className={`${darkBg ? 'h1-light' : 'h1-dark'}`}>{title}</h1>
-      <h2 className={`${darkBg ? 'h2-light' : 'h2-dark'}`}>{subtitle}</h2>
+    <div className="pt-8">
+      <h1
+        className={`h1-light pl-10 pr-10 font-normal sm:font-light ${
+          text ? '' : 'pb-8'
+        }`}
+      >
+        {title}
+      </h1>
+      <h2
+        className={`h2-light pl-10 pr-10 pb-3 text-center ${
+          subtitle ? '' : 'hidden'
+        }`}
+      >
+        {subtitle}
+      </h2>
       <p
-        className={`text-justify ${
-          darkBg ? 'text-textwhite' : 'text-textblack'
+        className={`text-justify text-textblack bg-grey rounded-3xl pl-10 pr-10 pt-8 pb-8 ${
+          text ? '' : 'hidden'
         }`}
       >
         {text}
@@ -35,31 +45,21 @@ export function createSplitSectionContent(
   rightContent: JSX.Element
 ) {
   return (
-    <div className="flex flex-col sm:flex-row sm:items-center">
+    <div className="flex flex-col pb-10 pt-14 md:flex-row md:items-center md:pt-0">
       {leftContent}
+      <div className="md:ml-10" />
       {rightContent}
     </div>
   );
 }
 
 function createContentContainer(content: JSX.Element) {
-  return (
-    <div className="pb-20 pt-20 pl-10 pr-10 w-full md:max-w-4xl">{content}</div>
-  );
+  return <div className="pb-10 pl-10 pr-10 w-full md:max-w-5xl">{content}</div>;
 }
 
-function createSectionContainer(
-  id: string,
-  darkBg: boolean,
-  content: JSX.Element
-) {
+function createSectionContainer(id: string, content: JSX.Element) {
   return (
-    <div
-      id={id}
-      className={`flex flex-col items-center ${
-        darkBg ? 'bg-black' : 'bg-white'
-      }`}
-    >
+    <div id={id} className="flex flex-col items-center">
       {content}
     </div>
   );
