@@ -20,7 +20,7 @@ export function createTextSectionContent(
       <h1 className={`${darkBg ? 'h1-light' : 'h1-dark'}`}>{title}</h1>
       <h2 className={`${darkBg ? 'h2-light' : 'h2-dark'}`}>{subtitle}</h2>
       <p
-        className={`ext-justify ${
+        className={`text-justify ${
           darkBg ? 'text-textwhite' : 'text-textblack'
         }`}
       >

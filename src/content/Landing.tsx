@@ -1,6 +1,6 @@
 import Hello from './landing/Hello';
 import LoremIpsum from './landing/LoremIpsum';
-import Timeline from './landing/Timeline';
+import Education from './landing/Education';
 
 export interface LandingSectionInput {
   darkBg: boolean;
@@ -17,7 +17,7 @@ export default function Landing() {
   return (
     <div>
       <Hello darkBg={computeBackground()} />
-      <Timeline darkBg={computeBackground()} />
+      <Education darkBg={computeBackground()} />
       <LoremIpsum darkBg={computeBackground()} />
     </div>
   );

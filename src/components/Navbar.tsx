@@ -10,7 +10,7 @@ import {
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="fixed top-0 left-0 right-0 bg-black">
+      <nav className="fixed top-0 left-0 right-0 bg-black z-1400">
         <div className="w-full max-w-4xl flex flex-row items-center m-auto pr-10 pl-10">
           {this.createNavbarLogo()}
           <div className="flex flex-row items-center justify-center w-full h-full">

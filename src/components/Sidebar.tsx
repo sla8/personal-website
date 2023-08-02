@@ -4,6 +4,10 @@ import { slide as Menu } from 'react-burger-menu';
 import 'components/Sidebar.css';
 import logo from 'images/logo-silviala.svg';
 import { id as helloId } from 'res/landing/hello';
+import {
+  id as educationId,
+  title as educationTitle,
+} from 'res/landing/education';
 
 export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   constructor(props: any) {
@@ -39,7 +43,19 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
           duration={500}
           onClick={() => this.closeMenu()}
         >
-          <img className="z-10 w-24" src={logo} alt="logo full name" />
+          <img className="w-24" src={logo} alt="logo full name" />
+        </Link>
+        <Link
+          key={`sidebar-${educationId}`}
+          activeClass="active"
+          to={educationId}
+          spy={true}
+          smooth={true}
+          offset={-64}
+          duration={500}
+          onClick={() => this.closeMenu()}
+        >
+          {educationTitle}
         </Link>
         <Link
           key="sidebar-logo"
