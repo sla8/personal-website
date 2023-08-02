@@ -47,9 +47,23 @@ function createBachelorTimelineItem(
       subtitle="Bachelor of Science ETH in Computer Science"
       text={
         <div>
-          <b>Bachelor Thesis</b> "Elaboration of a Function Memorization System
-          Together With the Implementation of a User Management System for
-          WebTigerJython"
+          <div className="pb-2">
+            <b>Bachelor Thesis</b> "Elaboration of a Function Memorization
+            System Together With the Implementation of a User Management System
+            for WebTigerJython"
+          </div>
+          <div>
+            <b>Extracurricular Activities</b>
+            <br />
+            VIS - Association of Computer Science Students at ETH Zurich
+            <ul className="list-disc pl-6 ">
+              <li>Board member</li>
+              <li>Leaning Support Committee (LUK) president and member</li>
+              <li>External Relations Committee (ERK) member</li>
+              <li>VC2 committee member</li>
+              <li>NachKomm committee president and member</li>
+            </ul>
+          </div>
         </div>
       }
       connectorTop={true}
@@ -78,11 +92,19 @@ function createMasterTimelineItem(
             ETH Zurich Information Security Group in collaboration with Zurich
             Insurance.
           </div>
-          <div>
+          <div className="pb-2">
             <b>Courses:</b> Security Engineering, Network Security, Future
             Internet, Big Data, Advanced Systems Lab, Algorithms Lab, Ubiquitous
             Computing, Advanced Seminar on Computational Haptics, Wireless
             Networking and Mobile Computing
+          </div>
+          <div>
+            <b>Extracurricular Activities</b>
+            <br />
+            VIS - Association of Computer Science Students at ETH Zurich
+            <ul className="list-disc pl-6 ">
+              <li>External Relations Committee (ERK) member</li>
+            </ul>
           </div>
         </div>
       }
