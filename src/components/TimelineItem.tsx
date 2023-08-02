@@ -8,7 +8,7 @@ import {
   Timeline,
 } from '@mui/lab';
 import SchoolIcon from '@mui/icons-material/School';
-import { Typography, useMediaQuery, useTheme } from '@mui/material';
+import { useMediaQuery, useTheme } from '@mui/material';
 
 interface TimelineContentContainerInput {
   screenIsAtLeastSm: boolean;
@@ -16,6 +16,7 @@ interface TimelineContentContainerInput {
 }
 
 interface TimelineItemInput {
+  key: string;
   time: string;
   titleColor: string;
   title: string;
@@ -70,30 +71,21 @@ export function TimelineItemLeft(props: TimelineItemInput) {
           paddingLeft: screenIsAtLeastSm ? 0 : '16px',
         }}
       >
-        <Typography
-          variant="h2"
-          sx={{ textAlign: screenIsAtLeastSm ? 'right' : 'left' }}
-          className={`${props.titleColor}`}
+        <div
+          className={`${screenIsAtLeastSm ? 'text-right' : 'text-left'} ${
+            props.titleColor
+          }`}
         >
           {props.title}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{
-            paddingBottom: '10px',
-            textAlign: screenIsAtLeastSm ? 'right' : 'left',
-          }}
-          className={`${props.titleColor}`}
+        </div>
+        <div
+          className={`${screenIsAtLeastSm ? 'text-right' : 'text-left'} ${
+            props.titleColor
+          } pb-1`}
         >
           {props.subtitle}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ textAlign: 'justify' }}
-          className={`${props.textColor}`}
-        >
-          {props.text}
-        </Typography>
+        </div>
+        <div className={`${props.textColor} text-justify`}>{props.text}</div>
       </TimelineContent>
     </TimelineItem>
   );
@@ -124,27 +116,15 @@ export function TimelineItemRight(props: TimelineItemInput) {
         <TimelineConnector sx={{ opacity: props.connectorBottom ? 1 : 0 }} />
       </TimelineSeparator>
       <TimelineContent sx={{ paddingRight: 0 }}>
-        <Typography
-          variant="h2"
-          sx={{ textAlign: 'left' }}
-          className={`${props.titleColor}`}
+        <div
+          className={`${props.titleColor} pb-1 text-left antialiased font-normal`}
         >
           {props.title}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ paddingBottom: '10px', textAlign: 'left' }}
-          className={`${props.titleColor}`}
-        >
+        </div>
+        <div className={`${props.titleColor} pb-1 text-left`}>
           {props.subtitle}
-        </Typography>
-        <Typography
-          variant="body1"
-          sx={{ textAlign: 'justify' }}
-          className={`${props.textColor}`}
-        >
-          {props.text}
-        </Typography>
+        </div>
+        <div className={`${props.textColor} text-justify`}>{props.text}</div>
       </TimelineContent>
     </TimelineItem>
   );

@@ -43,6 +43,7 @@ function createErgonInternshipItem(
 ) {
   return (
     <TimelineItemLeft
+      key="ergon-internship-timeline-item"
       time="2022"
       titleColor={titleColor}
       title="Software Development Intern"
@@ -71,6 +72,7 @@ function createCampusScoutZuehlkeItem(
 ) {
   return (
     <TimelineItemRight
+      key="zuehlke-campus-scout-timeline-item"
       time="2020 - 2021"
       titleColor={titleColor}
       title="Campus Scout"

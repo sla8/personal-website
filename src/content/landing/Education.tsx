@@ -40,6 +40,7 @@ function createBachelorTimelineItem(
 ) {
   return (
     <TimelineItemRight
+      key="bachelor-timeline-item"
       time="2014 - 2020"
       titleColor={titleColor}
       title="ETH Zurich"
@@ -79,6 +80,7 @@ function createMasterTimelineItem(
 ) {
   return (
     <TimelineItemLeft
+      key="master-timeline-item"
       time="2020 - 2023"
       titleColor={titleColor}
       title="ETH Zurich"
