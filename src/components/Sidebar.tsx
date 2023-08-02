@@ -8,6 +8,7 @@ import {
   id as educationId,
   title as educationTitle,
 } from 'res/landing/education';
+import { id as workId, title as workTitle } from 'res/landing/work';
 
 export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
   constructor(props: any) {
@@ -56,6 +57,18 @@ export default class Sidebar extends Component<{}, { menuOpen: boolean }> {
           onClick={() => this.closeMenu()}
         >
           {educationTitle}
+        </Link>
+        <Link
+          key={`sidebar-${workId}`}
+          activeClass="active"
+          to={workId}
+          spy={true}
+          smooth={true}
+          offset={-64}
+          duration={500}
+          onClick={() => this.closeMenu()}
+        >
+          {workTitle}
         </Link>
         <Link
           key="sidebar-logo"

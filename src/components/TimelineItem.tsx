@@ -87,7 +87,11 @@ export function TimelineItemLeft(props: TimelineItemInput) {
         >
           {props.subtitle}
         </Typography>
-        <Typography variant="body1" sx={{ textAlign: 'justify' }}>
+        <Typography
+          variant="body1"
+          sx={{ textAlign: 'justify' }}
+          className={`${props.textColor}`}
+        >
           {props.text}
         </Typography>
       </TimelineContent>
@@ -134,7 +138,11 @@ export function TimelineItemRight(props: TimelineItemInput) {
         >
           {props.subtitle}
         </Typography>
-        <Typography variant="body1" sx={{ textAlign: 'justify' }}>
+        <Typography
+          variant="body1"
+          sx={{ textAlign: 'justify' }}
+          className={`${props.textColor}`}
+        >
           {props.text}
         </Typography>
       </TimelineContent>

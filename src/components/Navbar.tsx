@@ -6,6 +6,7 @@ import {
   id as educationId,
   title as educationTitle,
 } from 'res/landing/education';
+import { id as workId, title as workTitle } from 'res/landing/work';
 
 export default class Navbar extends Component {
   render() {
@@ -19,6 +20,7 @@ export default class Navbar extends Component {
               educationId,
               educationTitle
             )}
+            {this.createNavbarLink(`navbar-${workId}`, workId, workTitle)}
             {this.createNavbarLink('test', 'test-section', 'Lorem ipsum')}
           </div>
         </div>
