@@ -53,6 +53,8 @@ export function TimelineItemLeft(props: TimelineItemInput) {
           whiteSpace: 'nowrap',
           paddingLeft: screenIsAtLeastSm ? '16px' : 0,
           paddingRight: screenIsAtLeastSm ? 0 : '16px',
+          minWidth: screenIsAtLeastSm ? 'none' : '103px',
+          maxWidth: screenIsAtLeastSm ? 'none' : '103px',
         }}
         className={`${props.textColor}`}
       >
@@ -103,8 +105,10 @@ export function TimelineItemRight(props: TimelineItemInput) {
           flex: screenIsAtLeastSm ? 1 : 0.1,
           whiteSpace: 'nowrap',
           paddingLeft: 0,
+          minWidth: screenIsAtLeastSm ? 'none' : '103px',
+          maxWidth: screenIsAtLeastSm ? 'none' : '103px',
         }}
-        className={`${props.textColor}`}
+        className={`w-60 ${props.textColor}`}
       >
         {props.time}
       </TimelineOppositeContent>
