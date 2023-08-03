@@ -76,7 +76,7 @@ export function TimelineItemLeft(props: TimelineItemInput) {
         <div
           className={`${screenIsAtLeastSm ? 'text-right' : 'text-left'} ${
             props.titleColor
-          }`}
+          } pb-1 text-left antialiased font-normal`}
         >
           {props.title}
         </div>
