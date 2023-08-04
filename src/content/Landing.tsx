@@ -15,7 +15,7 @@ export default function Landing() {
   }
 
   return (
-    <div className="pt-3">
+    <div className="pt-3 mb-10">
       <Hello />
       <Education darkBg={computeBackground()} />
       <Work darkBg={computeBackground()} />
