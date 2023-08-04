@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { Link } from 'react-scroll';
-import logo from 'images/logo-silviala.svg';
+import logo from 'images/logo.svg';
 import { id as helloId } from 'res/landing/hello';
 import {
   id as educationId,
@@ -11,8 +11,8 @@ import { id as workId, title as workTitle } from 'res/landing/work';
 export default class Navbar extends Component {
   render() {
     return (
-      <nav className="fixed top-0 left-0 right-0 bg-black z-1400">
-        <div className="w-full max-w-4xl flex flex-row items-center m-auto pr-10 pl-10">
+      <nav className="fixed top-0 left-0 right-0 bg-white z-1400 invisible sm:visible">
+        <div className="w-full max-w-4xl flex flex-row items-center m-auto pr-10 pl-10 pt-2 pb-2">
           {this.createNavbarLogo()}
           <div className="flex flex-row items-center justify-center w-full h-full">
             {this.createNavbarLink(
@@ -50,7 +50,7 @@ export default class Navbar extends Component {
         key={key}
         className="
         flex h-full items-center pl-6 pr-6 pt-3 pb-3
-        text-base font-light uppercase text-textwhite hover:border-t-8 hover:pt-1 hover:border-darkblue cursor-pointer"
+        text-base text-textblack hover:bg-green hover:rounded-3xl hover:text-white cursor-pointer"
         activeClass=""
         to={to}
         spy={true}

@@ -2,71 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Rozha+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 @layer base {
   body {
-    @apply font-sans;
+    font-family: 'Raleway';
     @apply antialiased;
     @apply text-base;
-    @apply font-light;
-    @apply bg-black;
+    @apply font-normal;
+    @apply bg-white;
+  }
+
+  .body {
+    /** needed for timeline **/
+    font-family: 'Raleway';
+    @apply antialiased;
+    @apply text-base;
+    @apply font-normal;
   }
 
   p {
     @apply whitespace-pre-line;
   }
 
-  .logo {
-    font-family: 'Rozha One';
-    @apply mb-2;
-    @apply pl-1;
-    @apply pr-1;
-    @apply text-2xl;
-    @apply whitespace-nowrap;
-    @apply text-yellow;
-    @apply lowercase;
-    @apply border-t-8;
-    @apply border-darkblue;
+  b {
+    @apply font-normal;
+    @apply text-textgreen;
   }
 
   .h1-light {
-    font-family: 'Rozha One';
+    font-family: 'Raleway';
     @apply text-4xl;
     @apply md:text-5xl;
-    @apply mb-4;
+    @apply font-light;
+    @apply mb-3;
     @apply text-center;
     @apply antialiased;
-    @apply text-yellow;
+    @apply text-red;
   }
 
   .h1-dark {
-    font-family: 'Rozha One';
+    font-family: 'Raleway';
     @apply text-4xl;
     @apply md:text-5xl;
-    @apply mb-4;
+    @apply font-light;
+    @apply mb-3;
     @apply text-center;
     @apply antialiased;
-    @apply text-textblue;
+    @apply text-green;
   }
 
   .h2-light {
+    font-family: 'Raleway';
     @apply mb-4;
     @apply text-lg;
     @apply text-justify;
     @apply antialiased;
     @apply whitespace-pre-line;
-    @apply font-extralight;
-    @apply text-yellow;
+    @apply text-red;
   }
 
   .h2-dark {
+    font-family: 'Raleway';
     @apply mb-4;
     @apply text-lg;
     @apply text-justify;
     @apply antialiased;
     @apply whitespace-pre-line;
-    @apply font-light;
-    @apply text-textblue;
+    @apply text-textgreen;
+  }
+
+  .h3-dark {
+    font-family: 'Raleway';
+    @apply mb-4;
+    @apply text-base;
+    @apply font-normal;
+    @apply text-justify;
+    @apply antialiased;
+    @apply whitespace-pre-line;
+    @apply text-textgreen;
+  }
+
+  .h3-light {
+    font-family: 'Raleway';
+    @apply mb-4;
+    @apply text-base;
+    @apply font-normal;
+    @apply text-justify;
+    @apply antialiased;
+    @apply whitespace-pre-line;
+    @apply text-red;
   }
 }

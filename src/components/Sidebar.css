@@ -1,3 +1,14 @@
+/*** Theme colors:
+  textwhite: '#E5E5E5',
+  textblack: '#212427',
+  black: '#121212',
+  darkgrey: '#363636',
+  grey: '#EBEBEB',
+  white: '#FFFFFF',
+  green: '#548687',
+  red: '#B0413E'
+***/
+
 /* Position and sizing of burger button */
 .bm-burger-button {
   position: fixed;
@@ -9,7 +20,7 @@
 
 /* Color/shape of burger icon bars */
 .bm-burger-bars {
-  background: #e5e5e5;
+  background: #548687;
 }
 
 /* Position and sizing of clickable cross button */
@@ -24,6 +35,7 @@
 /* Color/shape of close button cross */
 .bm-cross {
   background: #ffffff;
+  visibility: hidden;
 }
 
 /*
@@ -37,11 +49,7 @@
 
 /* General sidebar styles */
 .bm-menu {
-  background-image: linear-gradient(
-    to right,
-    rgba(0, 0, 0, 0.75),
-    rgba(0, 0, 0, 1)
-  );
+  background: rgba(84, 134, 135, 1);
   padding: 2.5em 1em 0;
   font-size: 1.5rem;
   font-weight: 300;
@@ -55,25 +63,22 @@
 
 /* Styling of overlay */
 .bm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.2) !important;
 }
 
 /* Individual item */
 .bm-item {
   display: inline-block;
-  color: #e5e5e5;
+  color: #212427;
+  background-color: #ebebeb;
+  border-radius: 20px;
+  padding: 6px 23px;
   margin-bottom: 15px;
   text-align: left;
   font-size: 1.125rem; /* 18px */
   line-height: 1.75rem;
-  font-weight: 200;
-  text-transform: uppercase;
-  transition: color 0.2s;
 }
 
 .bm-item:hover {
-  border-left: solid 8px #1d315c;
-  color: #ffffff;
-  padding-left: 13px;
   cursor: pointer;
 }

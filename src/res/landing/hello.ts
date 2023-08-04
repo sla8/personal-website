@@ -1,7 +1,7 @@
 export const id: string = 'landing-hello';
 export const title: string = 'Hello';
 
-export const subtitle: string = `I'm Silvia. Glad you found your way here!`;
+export const subtitle: string = `I'm Silvia La. Glad you found your way here!`;
 
 export const text: string = `I hold a Master's degree in Computer Science from ETH Zurich, where I also previously completed my undergraduate studies in Computer Science.
 

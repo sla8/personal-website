@@ -15,8 +15,8 @@ export default function Landing() {
   }
 
   return (
-    <div>
-      <Hello darkBg={computeBackground()} />
+    <div className="pt-3">
+      <Hello />
       <Education darkBg={computeBackground()} />
       <Work darkBg={computeBackground()} />
     </div>
