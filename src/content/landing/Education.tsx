@@ -60,7 +60,6 @@ function createBachelorTimelineItem() {
       ]}
       connectorTop={true}
       connectorBottom={false}
-      isRight={true}
     />
   );
 }
@@ -107,8 +106,7 @@ function createMasterTimelineItem() {
         },
       ]}
       connectorTop={true}
-      connectorBottom={false}
-      isRight={false}
+      connectorBottom={true}
     />
   );
 }

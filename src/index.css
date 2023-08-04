@@ -25,11 +25,6 @@
     @apply whitespace-pre-line;
   }
 
-  b {
-    @apply font-normal;
-    @apply text-textgreen;
-  }
-
   .h1-light {
     font-family: 'Raleway';
     @apply text-4xl;

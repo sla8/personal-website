@@ -25,15 +25,9 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <Navbar />
       <Sidebar />
-      {createLanding()}
+      <div className="pt-5 sm:mt-12 sm:pt-0">
+        <Landing />
+      </div>
     </ThemeProvider>
-  );
-}
-
-function createLanding() {
-  return (
-    <div className="pt-5 sm:mt-12 sm:pt-0">
-      <Landing />
-    </div>
   );
 }

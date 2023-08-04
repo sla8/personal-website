@@ -47,7 +47,6 @@ function createErgonInternshipItem() {
       ]}
       connectorTop={true}
       connectorBottom={true}
-      isRight={false}
     />
   );
 }
@@ -74,7 +73,6 @@ function createCampusScoutZuehlkeItem() {
       ]}
       connectorTop={true}
       connectorBottom={false}
-      isRight={true}
     />
   );
 }
