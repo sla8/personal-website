@@ -137,7 +137,7 @@ function createTimelineContent(
         marginRight: 0,
       }}
     >
-      <div className="bg-grey rounded-3xl pl-10 pr-10 pt-8 pb-8">
+      <div className="bg-grey rounded-3xl pl-8 pr-8 sm:pl-10 sm:pr-10 pt-4 pb-4">
         <div className={`text-left h2-dark mb-1 ${title ? '' : 'hidden'}`}>
           {title}
           <div

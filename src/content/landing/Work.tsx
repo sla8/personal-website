@@ -57,7 +57,7 @@ function createCampusScoutZuehlkeItem() {
       key="zuehlke-campus-scout-timeline-item"
       time="2020 - 2021"
       title="Campus Scout"
-      subtitle="Zühlke Engineering AG, Schlieren, Zurich"
+      subtitle="Zühlke Engineering AG, Schlieren, Switzerland"
       texts={[
         {
           title: undefined,
