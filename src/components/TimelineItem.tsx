@@ -138,10 +138,14 @@ function createTimelineContent(
       }}
     >
       <div className="bg-grey rounded-3xl pl-8 pr-8 sm:pl-10 sm:pr-10 pt-4 pb-4">
-        <div className={`text-left h2-dark mb-1 ${title ? '' : 'hidden'}`}>
+        <div
+          className={`text-left h2-dark text-textgreen mb-1 ${
+            title ? '' : 'hidden'
+          }`}
+        >
           {title}
           <div
-            className={`text-left mb-0 text-left h3-dark ${
+            className={`text-left mb-0 text-left h3-dark text-textgreen ${
               subtitle ? '' : 'hidden'
             }`}
           >
