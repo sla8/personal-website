@@ -78,6 +78,15 @@ function createMasterTimelineItem() {
             <div className="pb-2">
               Prioritizing Cybersecurity Controls Based on Coverage of Attack
               Techniques and Attack Probabilities
+              <br className="pb-2" />
+              <span className="text-textgreen">External references: </span>
+              <a href="https://zisc.ethz.ch/research/projects/prioritizing-cybersecurity-controls-based-on-coverage-of-attack-techniques/">
+                ZISC Research Project
+              </a>
+              {', '}
+              <a href="https://www.zurich.com/commercial-insurance/sustainability-and-insights/commercial-insurance-risk-insights/study-highlights-10-cyber-controls-reducing-70-most-frequent-attacks">
+                Zurich Insurance Article
+              </a>
             </div>
           ),
         },

@@ -50,7 +50,7 @@ export default class Navbar extends Component {
         key={key}
         className="
         flex h-full items-center pl-6 pr-6 pt-3 pb-3
-        text-base text-textblack hover:bg-green hover:rounded-3xl hover:text-white cursor-pointer"
+        text-base text-textblack hover:bg-green hover:rounded-3xl hover:text-white cursor-pointer no-underline"
         activeClass=""
         to={to}
         spy={true}

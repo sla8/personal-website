@@ -25,6 +25,12 @@
     @apply whitespace-pre-line;
   }
 
+  a {
+    @apply underline decoration-solid;
+    @apply underline-offset-2;
+    @apply decoration-green;
+  }
+
   .h1-light {
     font-family: 'Raleway';
     @apply text-4xl;
