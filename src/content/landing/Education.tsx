@@ -1,15 +1,15 @@
-import { Section, createTextSectionContent } from 'components/Section';
-import { LandingSectionInput } from 'content/Landing';
-import { id, title } from 'res/landing/education';
-import { useMediaQuery, useTheme } from '@mui/material';
+import { Section, createTextSectionContent } from "components/Section";
+import { LandingSectionInput } from "content/Landing";
+import { id, title } from "res/landing/education";
+import { useMediaQuery, useTheme } from "@mui/material";
 import {
   TimelineContentContainer,
   CustomTimelineItem,
-} from 'components/TimelineItem';
+} from "components/TimelineItem";
 
 export default function Education(props: LandingSectionInput) {
   const theme = useTheme();
-  const screenIsAtLeastMd = useMediaQuery(theme.breakpoints.up('md'));
+  const screenIsAtLeastMd = useMediaQuery(theme.breakpoints.up("md"));
 
   let content = (
     <div id={id}>
@@ -32,7 +32,7 @@ function createBachelorTimelineItem() {
       subtitle="Bachelor of Science ETH in Computer Science"
       texts={[
         {
-          title: 'Bachelor Thesis',
+          title: "Bachelor Thesis",
           text: (
             <div>
               Elaboration of a Function Memorization System Together With the
@@ -41,7 +41,7 @@ function createBachelorTimelineItem() {
           ),
         },
         {
-          title: 'Extracurricular Activities',
+          title: "Extracurricular Activities",
           text: (
             <div>
               <p className="text-left">
@@ -73,17 +73,21 @@ function createMasterTimelineItem() {
       subtitle="Master of Science ETH in Computer Science"
       texts={[
         {
-          title: 'Master Thesis',
+          title: "Master Thesis",
           text: (
             <div className="pb-2">
               Prioritizing Cybersecurity Controls Based on Coverage of Attack
               Techniques and Attack Probabilities
               <br className="pb-2" />
               <span className="text-textgreen">External references: </span>
+              <a href="https://www.research-collection.ethz.ch/handle/20.500.11850/627198">
+                Master Thesis Publication
+              </a>
+              {", "}
               <a href="https://zisc.ethz.ch/research/projects/prioritizing-cybersecurity-controls-based-on-coverage-of-attack-techniques/">
                 ZISC Research Project
               </a>
-              {', '}
+              {", "}
               <a href="https://www.zurich.com/commercial-insurance/sustainability-and-insights/commercial-insurance-risk-insights/study-highlights-10-cyber-controls-reducing-70-most-frequent-attacks">
                 Zurich Insurance Article
               </a>
@@ -91,7 +95,7 @@ function createMasterTimelineItem() {
           ),
         },
         {
-          title: 'Courses',
+          title: "Courses",
           text: (
             <div>
               Security Engineering, Network Security, Future Internet, Big Data,
@@ -102,7 +106,7 @@ function createMasterTimelineItem() {
           ),
         },
         {
-          title: 'Extracurricular Activities',
+          title: "Extracurricular Activities",
           text: (
             <div>
               Association of Computer Science Students at ETH Zurich (VIS)
